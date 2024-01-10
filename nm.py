@@ -17,46 +17,16 @@ print(
 +---------------------------------------------------------+
 """
 )
-print(
-    r"""                   
-                           .-.
-                          {{#}}
-          {}               8@8
-        .::::.             888
-    @\\/W\/\/W\//@         8@8
-     \\/^\/\/^\//     _    )8(    _
-      \_O_{}_O_/     (@)__/8@8\__(@)
- ____________________ `~"-=):(=-"~`
-|010101  |  |  <><><>|     |.|
-|<>      |  |      <>|     |S|
-|<>      |  |      <>|     |'|
-|<>   .--------.   <>|     |.|
-|     |   ()   |     |     |P|
-|_____| (O\/O) |_____|     |'|
-|     \   /\   /     |     |.|
-|------\  \/  /------|     |U|
-|       '.__.'       |     |'|
-|        |  |        |     |.|
-:        |  |        :     |N|
- \       |  |       /      |'|
-  \<>    |  |    <>/       |.|
-   \<>   |  |   <>/        |K|
-    `\<> |  | <>/'         |'|
-      `-.|__|.-`           \ /
-                            ^"""
-)
 
 
 ip_addr = input("Please enter the IP address you want to scan: ")
 print("The IP you entered is: ", ip_addr)
 type(ip_addr)
 
-resp = input(
-    """\nPlease enter the type of scan you want to run
-                1)SYN ACK Scan
-                2)UDP Scan
-                3)Comprehensive Scan \n"""
-)
+
+print("1) syn ack scan \n2) udp scan \n3)comprehensive scan")
+resp = input("please enter the type of scan you want to perform in knight_recon:")
+
 print("You have selected option: ", resp)
 resp_dict = {
     "1": ["-v -sS", "tcp"],
