@@ -22,9 +22,7 @@ print(
 ip_addr = input("Please enter the IP address you want to scan: ")
 print("The IP you entered is: ", ip_addr)
 type(ip_addr)
-
-
-print("1) syn ack scan \n2) udp scan \n3)comprehensive scan")
+print("1) syn ack scan\n2) udp scan\n3)comprehensive scan")
 resp = input("please enter the type of scan you want to perform in knight_recon:")
 
 print("You have selected option: ", resp)
@@ -43,7 +41,5 @@ else:
     print(scanner.scaninfo())
     if scanner.scaninfo() == "up":
         print("Scanner Status: ", scanner[ip_addr].state())
-        print(scanner[ip_addr].all_protocols())
-        print(
-            "Open Ports: ", scanner[ip_addr][resp_dict[resp][1]].keys()
-        )  # display all open ports
+        print("All Protocols: ", scanner[ip_addr].all_protocols())
+        print("Open Ports: ", scanner[ip_addr][resp_dict[resp][1]].keys())
